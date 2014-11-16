@@ -3,12 +3,25 @@
 /**
  * Classe controle básica para testar o nosso MVC
  */
-class HomeController {
+class HomeController extends Controller {
+
+    public $controller;
 
 	public function __construct() {
-		print_r('Método construct() do controller ' . Request::getGlobal('controller') . ' foi executado!');
+        $this->controller = Request::getGlobal('controller');
+		print_r(sprintf(
+            'Método <strong>construct()</strong> do controller <strong>%s</strong> foi executado!',
+            Request::getGlobal('controller')
+        ));
 		echo "<br />";
 	}
+
+	/**
+     * Método que será chamado caso nenhuma ação seja informada
+     */
+    // public function index() {
+    //     die(sprintf('Método <strong>index()</strong> de <strong>%s</strong>', $this->controller));
+    // }
 
 	/**
      * método form para ser executado dentro de nosso MVC
