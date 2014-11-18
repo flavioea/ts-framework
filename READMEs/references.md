@@ -4,6 +4,7 @@ References for development
 ## Construindo um MVC em PHP: A estrutura de arquivos
 
 http://www.phpmais.com/construindo-um-mvc-em-php-a-estrutura-de-arquivos/
+http://www.phpmais.com/construindo-um-mvc-em-php-as-visoes/
 
 
 ## WordPress APIs
@@ -39,4 +40,14 @@ http://codex.wordpress.org/Class_Reference/wpdb
 ## WP REST API
 
 http://wp-api.org/
+
+------
+
+## PHP Classes
+
+Form CRUD PDO: Insert, update, delete database records using form
+http://www.phpclasses.org/package/8892-PHP-Insert-update-delete-database-records-using-form.html
+
+PHP Bootstrap Pagination: Display pagination links using Bootstrap styles
+http://www.phpclasses.org/package/8906-PHP-Display-pagination-links-using-Bootstrap-styles.html
 

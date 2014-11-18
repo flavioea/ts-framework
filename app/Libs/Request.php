@@ -9,7 +9,6 @@
 class Request {
  
     /**
-     *
      *  Método estático usado para recuperar uma informação
      *  de dentro da variável $_REQUEST. Ele verifica se a
      *  chave existe no array. Caso exista, retorna o valor
@@ -19,14 +18,12 @@ class Request {
      *  @return string
      */
     public static function get($key) {
- 
         if (isset($_REQUEST[$key]) && ($_REQUEST[$key] != '')) {
             return $_REQUEST[$key];
         }
         else {
             return '';
         }
- 
     }
  
     /**

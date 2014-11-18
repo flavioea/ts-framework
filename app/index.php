@@ -2,11 +2,14 @@
 
 header('Content-Type: text/html; charset=utf-8');
 
-
 if (!defined('DS'))
 	define('DS', DIRECTORY_SEPARATOR);
 
+if (!defined('APP'))
+	define('APP', __DIR__);
+
 require_once 'Libs/Request.php';
+require_once 'Libs/View.php';
 require_once 'Libs/Controller.php';
  
 $controller = Request::get('controller');
