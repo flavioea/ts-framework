@@ -11,6 +11,8 @@ if (!defined('APP'))
 require_once 'Libs/Request.php';
 require_once 'Libs/View.php';
 require_once 'Libs/Controller.php';
+require_once 'Libs/Config.php';
+require_once 'Libs/Database.php';
  
 $controller = Request::get('controller');
 
