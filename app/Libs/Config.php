@@ -33,5 +33,17 @@ class Config {
             'charset' => 'utf-8'
         )
     );
+
  
 }
+
+ActiveRecord\Config::initialize(function($cfg) {
+    $cfg->set_model_directory(APP . DS . 'Models');
+    $cfg->set_connections(
+        array(
+            'development' => 'mysql://tscms:068s@b9i_78@localhost/ts_cms',
+            'test' => 'mysql://username:password@localhost/test_database_name',
+            'production' => 'mysql://username:password@localhost/production_database_name'
+        )
+    );
+});

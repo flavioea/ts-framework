@@ -44,20 +44,14 @@ class HomeController extends Controller {
      * Método listar que será executado pela URL.
      */
     public function catalog() {
-        # Carrega o modelo `User` que está na pasta `Models`
-        $this->model('User');
- 
-        # Define uma variável para receber a lista de usuários
+        // # Define uma variável para receber a lista de usuários
         $list = array();
  
-        # Usa o método bind para vincular a variável `list` dentro da view.
+        // # Usa o método bind para vincular a variável `list` dentro da view.
         $this->view->bind('list', $list);
- 
-        # A partir de agora, toda alteração na variável `list` é refletida
-        # na variável `list` dentro da view
- 
-        # Usa o modelo para listar os usuários cadastrados no banco de dados
-        $list = $this->User->catalog();
+
+        # Retorn find method from ActiveRecord
+        $list = User::find('all');
  
         # Indica a view para renderizar  a lista de usuários no navegador
         $this->view->render('User/list');

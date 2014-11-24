@@ -41,11 +41,11 @@
 		</tr>
         <!-- a variável lista que colocamos
         dentro da visão -->
-        <?php foreach($list as $user): ?>
+        <?php foreach($list as $value['User']) : ?>
         	<tr>
-        		<td><?php echo $user['name']; ?></td>
-        		<td><?php echo $user['last_name']; ?></td>
-        		<td><?php echo $user['login']; ?></td>
+        		<td><?php echo $value['User']->name; ?></td>
+        		<td><?php echo $value['User']->last_name; ?></td>
+        		<td><?php echo $value['User']->login; ?></td>
         	</tr>
         <?php endforeach; ?>
     </table>

@@ -14,8 +14,8 @@ if (!defined('LIB'))
 require_once LIB . DS . 'Request.php';
 require_once LIB . DS . 'View.php';
 require_once LIB . DS . 'Controller.php';
+require_once LIB . DS . 'ActiveRecord' . DS . 'ActiveRecord.php';
 require_once LIB . DS . 'Config.php';
-require_once LIB . DS . 'Database.php';
  
 $controller = Request::get('controller');
 
