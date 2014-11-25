@@ -11,6 +11,9 @@ if (!defined('APP'))
 if (!defined('LIB'))
 	define('LIB', APP . DS . 'Libs');
 
+if (!defined('DEBUG'))
+	define('DEBUG', false);
+
 require_once LIB . DS . 'Request.php';
 require_once LIB . DS . 'View.php';
 require_once LIB . DS . 'Controller.php';
@@ -49,8 +52,7 @@ $controller = new $controller();
 
 # Agora verificamos se a Action foi informada na URL
 if ($action == "") {
-    # se não informamos a ação
-    # usamos o método padrão index
+    # se não informamos a ação usamos o método padrão index
     $action = 'index';
 }
 
@@ -62,8 +64,9 @@ else
 	# Se não existir, emite uma mensagem de erro
 	die('Página não encontrada!');
 
-/*
-print "O controller é: {$controller}<br />";
-print "O controllerName é: {$controllerName}<br />";
-print "O método do controller é: {$action}";
-*/
+
+if (DEBUG) {
+	print "O controller é: {$controller}<br />";
+	print "O controllerName é: {$controllerName}<br />";
+	print "O método do controller é: {$action}";
+}

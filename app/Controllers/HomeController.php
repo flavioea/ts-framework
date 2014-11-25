@@ -11,26 +11,27 @@ class HomeController extends Controller {
         parent::__construct();
         
         $this->_controller = Request::getGlobal('controller');
-		print_r(sprintf(
-            'Método <strong>construct()</strong> do controller <strong>%s</strong> foi executado!',
-            Request::getGlobal('controller')
-        ));
-		echo "<br />";
+
+        if (DEBUG) {
+    		print_r(sprintf(
+                'Método <strong>construct()</strong> do controller <strong>%s</strong> foi executado!',
+                Request::getGlobal('controller')
+            ));
+    		echo "<br />";
+        }
 	}
 
 	/**
      * Método que será chamado caso nenhuma ação seja informada
      */
     public function index() {
-        //die(sprintf('Método <strong>index()</strong> de <strong>%s</strong>', $this->controller));
-        # Agora esse método usa o mecanismo de visão
- 
         # Cria a variável "title" onde é utilizada no arquivo de visão do MVC
-        $this->view->set('title', 'Meu primeiro MVC em PHP');
+        $this->view->set('pageTitle', 'Meu primeiro MVC em PHP');
      
-        # Diz ao nosso mecanismo de visão para renderizar os seus dados
-        # usando o arquivo de visão Views/home/index.php
+        # Renderizar os seus dados da View Views/home/index.php
+        $this->view->render('includes/header');
         $this->view->render('home/index');
+        $this->view->render('includes/footer');
     }
 
 	/**
@@ -47,14 +48,17 @@ class HomeController extends Controller {
         // # Define uma variável para receber a lista de usuários
         $list = array();
  
-        // # Usa o método bind para vincular a variável `list` dentro da view.
+        // # Usa o método bind para vincular a variável `list` dentro da view
+        $this->view->set('pageTitle', 'Lista de Usuários');
         $this->view->bind('list', $list);
 
         # Retorn find method from ActiveRecord
         $list = User::find('all');
  
-        # Indica a view para renderizar  a lista de usuários no navegador
+        # Indica a view para renderizar a lista de usuários no navegador
+        $this->view->render('includes/header');
         $this->view->render('User/list');
+        $this->view->render('includes/footer');
     }
 
 }
