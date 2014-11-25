@@ -1,0 +1,3 @@
+[submodule "app/Libs/ActiveRecord"]
+	path = app/Libs/ActiveRecord
+	url = git@github.com:devtosystems/php-activerecord.git
