@@ -12,7 +12,7 @@ if (!defined('LIB'))
 	define('LIB', APP . DS . 'Libs');
 
 if (!defined('DEBUG'))
-	define('DEBUG', false);
+	define('DEBUG', true);
 
 require_once LIB . DS . 'Request.php';
 require_once LIB . DS . 'View.php';
@@ -47,7 +47,7 @@ else
 	die("O Controller <strong>{$controller}</strong> não existe no diretório do MVC.");
 
 # Instancia o Controller
-$controller = new $controller();
+$controlInstance = new $controller();
 
 
 # Agora verificamos se a Action foi informada na URL
@@ -57,16 +57,19 @@ if ($action == "") {
 }
 
 # Verifica se o método existe no objeto Controller
-if (method_exists($controller, $action))
+if (method_exists($controlInstance, $action))
 	# se existir, executa o método
-	$controller->$action();
+	$controlInstance->$action();
 else
 	# Se não existir, emite uma mensagem de erro
 	die('Página não encontrada!');
 
 
 if (DEBUG) {
+	print "<div style=\"margin: 5px; padding: 5px;\">";
+	print "<h2>Debug</h2>";
 	print "O controller é: {$controller}<br />";
 	print "O controllerName é: {$controllerName}<br />";
 	print "O método do controller é: {$action}";
+	print "</p>";
 }
