@@ -1,7 +1,10 @@
 Ts Framework
 ============
 
-**Framework PHP and MySQL for CMS**
+**Framework PHP and Database for CMS**
+
+Project URL: http://projects.tosystems.net/ts-framework
+
 
 Author: Francis Rodrigues
 
@@ -14,8 +17,13 @@ Facebook: https://fb.com/tosystemsbr
 
 ## Libraries
 
-- Design Pattern - OOP and MVC
 - ActiveRecord
+
+
+## Features
+
+- Design Pattern - OOP and MVC
+- ActiveRecord with MySQL, PostgreSQL, SQLite
 
 
 ## Usage
