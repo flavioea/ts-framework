@@ -34,3 +34,6 @@ Browse in http://localhost/?controller=home -> HomeController::index()
 
 Browse in http://localhost/?controller=home&action=catalog -> HomeController::catalog()
 
+
+## License MIT
+
