@@ -7,6 +7,9 @@ http://www.phpmais.com/construindo-um-mvc-em-php-conceitos-basicos/
 ## PHP ActiveRecord
 http://www.phpactiverecord.org/
 
+## Wordpress
+http://wordpress.org/
+
 ## WordPress APIs
 http://codex.wordpress.org/WordPress_APIs
 
@@ -27,3 +30,7 @@ http://www.phpclasses.org/package/8892-PHP-Insert-update-delete-database-records
 
 ## PHP Bootstrap Pagination: Display pagination links using Bootstrap styles
 http://www.phpclasses.org/package/8906-PHP-Display-pagination-links-using-Bootstrap-styles.html
+
+## Bootstrap
+Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+http://getbootstrap.com/
