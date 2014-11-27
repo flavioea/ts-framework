@@ -1,4 +1,9 @@
 # Ignore log files
 app/Tmp/Logs/*
 
+# Ignore folder to node_components
+node_components/
+
+# Ignore folder to bower_components
+bower_components/
 

@@ -1,0 +1,32 @@
+{
+  "name": "ts-framework",
+  "version": "1.0.0",
+  "authors": [
+    "Francis Rodrigues <dev-br@tosystems.net>"
+  ],
+  "description": "PHP and Database Framework to CMS",
+  "keywords": [
+    "framework",
+    "php",
+    "mysql",
+    "postgresql",
+    "sqlite",
+    "cms",
+    "javascript",
+    "npm",
+    "bootstrap",
+    "activerecord"
+  ],
+  "license": "MIT",
+  "homepage": "http://tosystems.net/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}
