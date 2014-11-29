@@ -120,12 +120,25 @@ class Load {
 
     public function getDebug() {
         if (DEBUG) {
-            print "<div style=\"margin: 5px; padding: 5px;\">";
-            print "<h2>Debug</h2>";
+            print "<hr>";
+
+            print "<h4>Debug</h4>";
+
+            print "<pre style=\"margin: 5px; padding: 5px;\">";
             print "O controller é: {$this->controller}<br />";
             print "O controllerName é: {$this->controllerName}<br />";
             print "O método do controller é: {$this->action}";
-            print "</p>";
+            print "</pre>";
+
+            if (DEBUG_SERVER) {
+                print "<h4>Debug Server</h4>";
+
+                print "<pre style=\"margin: 5px; padding: 5px;\">";
+                foreach ($_SERVER as $k => $v) {
+                    print_r(sprintf("<p>[%s] => %s</p>", $k, strip_tags($v)));
+                }
+                print "</pre>";
+            }
         }
     }
 
