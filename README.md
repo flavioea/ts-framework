@@ -18,14 +18,15 @@ Facebook: https://fb.com/tosystemsbr
 ## Libraries
 
 - ActiveRecord
+- Template Engine
 
 
 ## Features
 
-- Design Pattern - OOP and MVC
+- Design Pattern - OOP and MVC, Strategy
 - ActiveRecord with MySQL, PostgreSQL, SQLite
 - Template Engine with `[@key]` tags
-
+- Support PHP 5.4+
 
 ## Usage
 
