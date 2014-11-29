@@ -24,6 +24,7 @@ Facebook: https://fb.com/tosystemsbr
 
 - Design Pattern - OOP and MVC
 - ActiveRecord with MySQL, PostgreSQL, SQLite
+- Template Engine with `[@key]` tags
 
 
 ## Usage

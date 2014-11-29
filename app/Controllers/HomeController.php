@@ -29,8 +29,6 @@ class HomeController extends Controller {
      * Método que será chamado caso nenhuma ação seja informada
      */
     public function index() {
-        # Cria a variável "title" onde é utilizada no arquivo de visão do MVC
-
         $template = new Template();
         $template->setTheme('Default');
 
