@@ -76,8 +76,8 @@ class View {
  
         # Procura o arquivo php dentro da pasta `Views`. Se o arquivo existir, inclui 
         # o mesmo dentro da função, executando e rederizando o conteúdo dele.
-        if (file_exists(APP . DS . 'Views' . DS . $filename . '.php')) {
-            include APP . DS . 'Views' . DS . $filename . '.php';
+        if (file_exists(VIEWDIR . DS . $filename . '.php')) {
+            include VIEWDIR . DS . $filename . '.php';
         }
     }
 

@@ -55,3 +55,14 @@ http://ianburris.com/tutorials/oophp-template-engine/
 **Building a template engine in PHP**
 http://www.rasmuslarsson.se/2013/05/a-template-engine-in-php/
 
+
+## Web optimization
+
+**CSS compact**
+
+**Js compact**
+
+**Images optimized**
+
+**Browser cache**
+

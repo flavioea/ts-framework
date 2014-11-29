@@ -30,12 +30,19 @@ class HomeController extends Controller {
      */
     public function index() {
         # Cria a variável "title" onde é utilizada no arquivo de visão do MVC
-        $this->view->set('pageTitle', 'Meu primeiro MVC em PHP');
-     
-        # Renderizar os seus dados da View Views/home/index.php
-        $this->view->render('includes/header');
-        $this->view->render('home/index');
-        $this->view->render('includes/footer');
+
+        $template = new Template();
+        $template->setTheme('Default');
+
+        $template->setFile('header', (Object) array('folder' => 'includes'));
+        $template->set('urlTheme', 'app/Themes/Default');
+        $template->set('pageTitle', 'The CMS with Bootstrap Template');
+        echo $template->output();
+
+        $template->setFile('home');
+        $template->set('pageTitle', 'Meu primeiro MVC em PHP');
+        $template->set('username', 'Monk3y');
+        echo $template->output();
     }
 
 	/**
@@ -51,14 +58,14 @@ class HomeController extends Controller {
     public function catalog() {
         // # Define uma variável para receber a lista de usuários
         $list = array();
- 
+
         // # Usa o método bind para vincular a variável `list` dentro da view
         $this->view->set('pageTitle', 'Lista de Usuários');
         $this->view->bind('list', $list);
 
         # Retorn find method from ActiveRecord
         $list = User::find('all');
- 
+
         # Indica a view para renderizar a lista de usuários no navegador
         $this->view->render('includes/header');
         $this->view->render('User/list');
