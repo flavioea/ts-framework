@@ -30,24 +30,4 @@ class Controller {
     public function index() {
         die("Método <strong>index()</strong> do Controller base!");
     }
-
-    /**
-     * Método para incluir e carregar um modelo dinamicamente dentro
-     * de um controle.
-     */
-    public function model($filename) {
-        $modelLabel = 'Models';
-        # Search model file in model directory
-        if (file_exists(APP . DS . $modelLabel . DS . $filename . '.php')) {
-            include_once APP . DS . $modelLabel . DS . $filename . '.php';
-        }
-        else {
-            die("Modelo {$filename} não encontrado na pasta Models.");
-        }
- 
-        # se o arquivo existir, instancia o objeto
-        # e usa o mesmo como propriedade do controle
-        $this->$filename = new $filename();
-    }
- 
 }
