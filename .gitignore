@@ -7,3 +7,8 @@ node_components/
 # Ignore folder to bower_components
 bower_components/
 
+# Ignore config files IDE
+.idea/
+.project
+.sublime-project
+

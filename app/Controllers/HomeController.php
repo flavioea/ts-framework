@@ -1,5 +1,9 @@
 <?php
- 
+
+use app\Libs\Controller;
+use app\Libs\Request;
+use app\Libs\Template;
+
 /**
  * Classe controle básica para testar o nosso MVC
  */

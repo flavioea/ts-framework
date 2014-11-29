@@ -1,5 +1,9 @@
 <?php
  
+namespace app\Libs;
+
+use View;
+
 /**
  * Classe controller base para todos os Controllers do nosso MVC em PHP.
  * Ela serve para compartilhar código entre todos os controllers.
@@ -32,11 +36,10 @@ class Controller {
      * de um controle.
      */
     public function model($filename) {
- 
-        # procura o arquivo modelo dentro
-        # da pasta modelos.
-        if (file_exists(APP . DS . 'Models' . DS . $filename . '.php')) {
-            include_once APP . DS . 'Models' . DS . $filename . '.php';
+        $modelLabel = 'Models';
+        # Search model file in model directory
+        if (file_exists(APP . DS . $modelLabel . DS . $filename . '.php')) {
+            include_once APP . DS . $modelLabel . DS . $filename . '.php';
         }
         else {
             die("Modelo {$filename} não encontrado na pasta Models.");

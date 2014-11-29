@@ -1,5 +1,7 @@
 <?php
- 
+
+namespace app\Libs;
+
 /**
  * Classe usada para recuperar e adicionar informações
  * dentro da variável $_REQUEST. É apenas um facilitador
